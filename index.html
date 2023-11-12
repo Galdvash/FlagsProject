@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 20vw;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #id_img{    
+            margin-bottom: 1em;
+        }
+        
+    </style>
+    <script>
+      
+        function changeIsr(){
+            document.querySelector("#id_img").src = "flags_images/israel.jpg"
+        }
+
+        function changeUsa(){
+            document.querySelector("#id_img").src = "flags_images/usa.jpg"
+        }
+
+        function changeBrazil(){
+            document.querySelector("#id_img").src = "flags_images/brazil.jpg"
+        }
+
+        function changeFrance(){
+            document.querySelector("#id_img").src = "flags_images/france.jpg"
+        }
+
+        function changeImgWidth(){
+            document.querySelector("#id_img").width = document.querySelector("#id_input").value;
+        }
+    </script>
+    
+</head>
+<body >
+<div class="container">
+    <img id="id_img" src="flags_images/israel.jpg" alt="IsraelFlag" width="400">
+    
+ <div>
+    <button onclick="changeIsr()">Israel</button>
+    <button onclick="changeUsa()">Usa</button>
+    <button onclick="changeBrazil()">Brazil</button>
+    <button onclick="changeFrance()">France</button>
+ </div>
+    <h2>Enter a Number</h2>
+    <input id="id_input" type="number" value="400" oninput="changeImgWidth()">
+</div>
+
+</body>
+
+</html>
